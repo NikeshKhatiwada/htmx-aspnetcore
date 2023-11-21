@@ -6,7 +6,7 @@ namespace Exercises.Pages
     public class Counter : PageModel
     {
         private static int count = 0;
-        
+
         public void OnGet()
         {
             // reset on refresh
@@ -17,7 +17,7 @@ namespace Exercises.Pages
         {
             // TODO: Increment the count on each request
             // hint: {count++}
-            return Content($"<span></span>", "text/html");
+            return Content($"<span>{++count}</span>", "text/html");
         }
     }
 }
