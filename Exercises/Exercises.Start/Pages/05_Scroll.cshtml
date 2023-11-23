@@ -11,14 +11,14 @@
     # 5. Infinite Scroll
 
     The user experience is about giving our users as much information as they can absorb, no more and no less. You can use paging as a technique to feed more information to a user once they've processed what's you already displayed to them. In modern web development, there are two common styles of paging:
-    
-    - Manual paging, where your user clicks to get the next set of results. 
+
+    - Manual paging, where your user clicks to get the next set of results.
     - Infinite scrolling, commonly used on social media sites when the site has chronologically ordered the results.
-    
-    In this sample, we'll show the more exciting **infinite scrolling** mechanic. HTMX supports the `revealed` trigger, which the client raises when an element is visible in the UI. You'll use this event to append a new set of results to the current results. **Note, in this sample, the results will scroll forever. So you'll never reach the bottom, but you can certainly try.** 
-    
+
+    In this sample, we'll show the more exciting **infinite scrolling** mechanic. HTMX supports the `revealed` trigger, which the client raises when an element is visible in the UI. You'll use this event to append a new set of results to the current results. **Note, in this sample, the results will scroll forever. So you'll never reach the bottom, but you can certainly try.**
+
     Let's look at the attributes we'll apply to the last element of our currently visible result set. You'll need some Razor logic to apply the attributes only once. Look in the files `05_Scroll.cshtml` and `Shared/_Card.cshtml` to see implementation of this sample.
-    
+
     ```
     @* ReSharper disable Html.TagNotClosed *@
     <div
@@ -33,9 +33,9 @@
         }>
     @* ReSharper restore Html.TagNotClosed *@
     ```
-    
+
     Remember, this will be triggered when this element is visible.
-    
+
     **Give it a try!**
 </markdown>
 
