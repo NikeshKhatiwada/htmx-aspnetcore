@@ -9,26 +9,30 @@
 <markdown>
     # 8. Keyboard Shortcuts
 
-    HTMX typically triggers off of user clicks but can do so much more. You can assign triggers to keystrokes and commands using the `keyup[]` value for `hx-trigger`. For example, the following attribute will show a toast notification when using the `?` key anywhere in the `body`. 
-    
+    HTMX typically triggers off of user clicks but can do so much more. You can assign triggers to keystrokes and commands using the `keyup[]` value for `hx-trigger`. For example, the following attribute will show a toast notification when using the `?` key anywhere in the `body`.
+
     ```
     hx-trigger="keyup[key=='?'] from:body"
     ```
-    
+
     Note that the toast element found in `Shared/_Toast.cshtml` is only HTML. The toast's target is an HTML element at the bottom of our page.
-    
+
     **Try it out!**
-    
+
     **Question: What other keyboard shortcuts would you like to attach? Try changing the `hx-trigger` attribute with your own key combinations.**
-    
+
     ---
 </markdown>
 
-<div class="mb-5">
-    
+<div class="mb-5"
+        hx-get="@Url.Page("08_Shortcuts", "Help")"
+        hx-target="#toast-goes-here"
+        hx-trigger="keyup[key == '?'] from:body"
+        hx-swap="innerHtml">
+
     @* TODO: Replace the previous div with the following *@
-    @* 
-    <div class="mb-5" 
+    @*
+    <div class="mb-5"
         hx-get="@Url.Page("08_Shortcuts", "Help")"
         hx-target="#toast-goes-here"
         hx-trigger="keyup[key=='?'] from:body"
