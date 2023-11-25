@@ -6,11 +6,16 @@
         @foreach (var tab in Model.Items)
         {
             <li class="nav-item">
-                <a>
+                <a
+                    href="#"
+                    hx-get="@Url.Page("07_Tabs", new {tab})"
+                    hx-target="#tabbed-content"
+                    class="nav-link @Model.IsSelectedCss(tab, "active")"
+                    aria-current="@Model.IsSelectedCss(tab, "page")">
                     @tab
                 </a>
             </li>
-            
+
             @* TODO: alter above anchor with HTMX attributes and ASP.NET Core helpers
             <!-- href is required or anchor won't be clickable -->
             <a
@@ -22,7 +27,7 @@
                 @tab
             </a>
             *@
-            
+
         }
     </ul>
 
@@ -30,7 +35,7 @@
         <div class="tab-pane show active p-1 mt-3" role="tabpanel">
             <h2>@Model.Tab</h2>
             <hr>
-            <img alt="random image" 
+            <img alt="random image"
                  class="rounded float-end m-2 mt-1 easeload"
                  width="200"
                  height="200"

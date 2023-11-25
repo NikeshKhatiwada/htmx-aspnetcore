@@ -12,11 +12,11 @@ namespace Exercises.Pages
     {
         public IEnumerable<string> Items { get; }
             = new[] {"First", "Second", "Third"};
-        
+
         [BindProperty(Name = "tab", SupportsGet = true)]
         public string? Tab { get; set; }
 
-        public bool IsSelected(string name) => 
+        public bool IsSelected(string name) =>
             name.Equals(Tab?.Trim(), StringComparison.OrdinalIgnoreCase);
 
         public string? IsSelectedCss(string tab, string? cssClass)
@@ -26,7 +26,7 @@ namespace Exercises.Pages
         {
             // make sure we have a tab
             Tab = Items.Any(IsSelected) ? Tab : Items.First();
-            
+
             return Request.IsHtmx()
                 ? Partial("_Tabs", this)
                 : Page();
