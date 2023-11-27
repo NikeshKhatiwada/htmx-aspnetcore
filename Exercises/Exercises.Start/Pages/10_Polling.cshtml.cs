@@ -26,7 +26,7 @@ namespace Exercises.Pages
                 : Page();
         }
     }
-    
+
     public class Stonk
     {
         public Stonk(string name, string icon, decimal currentPrice, decimal openingPrice)
