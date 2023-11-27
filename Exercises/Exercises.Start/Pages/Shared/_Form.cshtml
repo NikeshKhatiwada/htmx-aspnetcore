@@ -1,14 +1,18 @@
 @model Exercises.Pages.FormValidation
 
 @* TODO: Replace the following <form> with HTMX enabled tag *@
-@* 
+@*
     <form hx-post="@Url.Page("09_FormValidation")"
       hx-swap="outerHTML"
       class="form-horizontal needs-validation"
-      _="on htmx:beforeSend set #submitButton.disabled to 'disabled'"> 
+      _="on htmx:beforeSend set #submitButton.disabled to 'disabled'">
 *@
 
-<form class="form-horizontal needs-validation">
+<form
+    hx-post="@Url.Page("09_FormValidation")"
+    hx-swap="outerHtml"
+    class="form-horizontal needs-validation"
+    _="on htmx:beforeSend set #submitButton.disabled to 'disabled'">
 
     <!-- Text input-->
     <div class="mb-3">
