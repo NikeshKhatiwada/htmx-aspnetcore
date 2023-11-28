@@ -44,6 +44,12 @@ namespace Exercises.Models
                 // this exception is expected
             }
         }
+
+        override
+        public Task StopAsync(CancellationToken cancellationToken)
+        {
+            return Task.CompletedTask;
+        }
     }
 
     public static class Number
