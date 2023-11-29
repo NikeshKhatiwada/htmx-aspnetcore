@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "JetSwagStore", "JetSwagStor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises.End", "Exercises\Exercises.End\Exercises.End.csproj", "{9F221DED-210C-4907-BE8A-7D0D489F9F70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetSwagStore.Models", "JetSwagStore\JetSwagStore.Models\JetSwagStore.Models.csproj", "{244DD436-55EC-40C5-BB86-0548616213AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JetSwagStore.Models", "JetSwagStore\JetSwagStore.Models\JetSwagStore.Models.csproj", "{244DD436-55EC-40C5-BB86-0548616213AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JetSwagStore.Web", "JetSwagStore\JetSwagStore.Web\JetSwagStore.Web.csproj", "{6D8B6CF0-815B-43F8-8202-C75A4608B17D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JetSwagStore.Web", "JetSwagStore\JetSwagStore.Web\JetSwagStore.Web.csproj", "{6D8B6CF0-815B-43F8-8202-C75A4608B17D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercises.Start", "Exercises\Exercises.Start\Exercises.Start.csproj", "{17DCDDA7-058F-4FD8-BE87-45BD77B255F2}"
 EndProject
