@@ -9,18 +9,18 @@
 
 <markdown>
     # 14. Out of Band Swaps
-    
+
     Very often, with HTMX, you'll be replacing relatively local elements with the results of your action. For example, you'll submit a form and then replace that form with a notification. It's a pattern that will likely be the majority of your experience with HTMX. That said, there are a few circumstances where you may want to update other global elements through an interaction.
-    
+
     An everyday use case might be a global shopping cart indicator in the navigation of your site. Adding or removing items will update a local count for the product and a global cart item count.
-    
+
     HTMX comes with an **[Out of Band Swaps](https://htmx.org/docs/#oob_swaps)** feature which allows you to piggyback additional UI elements on the response from your original interaction. For example, on the response, we can add the `hx-swap-oob` attribute on any element with an `id`, with htmx finding and replacing the existing component on the page with the new response. The rest of the HTML response will follow the default HTMX behavior.
-    
+
     ```html
       <div id="message" hx-swap-oob="true">Swap me directly!</div>
       Additional Content
     ```
-    
+
     Check out the sample below for a snappy shopping experience.
 
 </markdown>
@@ -48,7 +48,7 @@
 }
 
 @section head {
-    <style>         
+    <style>
         .top {
             padding: 18px;
             background-color: #ff8900;
@@ -56,7 +56,7 @@
             border-top-right-radius: 5px;
             color: #fff
         }
-        
+
         .middle {
             height: 350px;
             display: flex;
@@ -65,12 +65,12 @@
             flex-direction: column !important;
             padding: 10px
         }
-        
+
         .bottom {
             background: #eee;
             padding: 30px 10px 10px;
         }
-        
+
         .add {
             height: 38px;
             border-radius: 4px;
@@ -78,7 +78,7 @@
             padding-right: 22px;
             padding-left: 20px
         }
-        
+
         .form-control:focus {
             color: #495057;
             background-color: #fff;

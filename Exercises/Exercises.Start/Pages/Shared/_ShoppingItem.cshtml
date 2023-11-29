@@ -21,15 +21,19 @@
         </div>
         <div class="bottom d-flex flex-row justify-content-center">
             @* TODO: Enhance the form below with HTMX attributes *@
-            @* 
-            <form 
-                hx-post 
-                hx-page="14_OutOfBand" 
-                hx-page-handler="AddToCart" 
-                hx-swap="outerHTML" 
-                hx-target="#shoppingItem"> 
+            @*
+            <form
+                hx-post
+                hx-page="14_OutOfBand"
+                hx-page-handler="AddToCart"
+                hx-swap="outerHTML"
+                hx-target="#shoppingItem">
             *@
-            <form>
+            <form hx-post
+                    hx-page="14_OutOfBand"
+                    hx-page-handler="AddToCart"
+                    hx-swap="outerHtml"
+                    hx-target="#shoppingItem">
                 <div class="input-group mb-3">
                     <input id="count" type="number" min="0" max="100" class="form-control" name="count" value="@Model.TotalItemsInCart">
                     <button type="submit" class="btn btn-success btn-sm add">
